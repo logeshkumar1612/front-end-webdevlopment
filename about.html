@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+     <link rel="stylesheet" href="about.css">
+    <title>About</title>
+</head>
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@300&display=swap');
+/* boiler plate for css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+  font-family: 'Roboto', sans-serif;
+    background-color: #011627;
+}
+.illus {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 300px;
+}
+.self{
+    margin-top: 90px;
+}
+.self .title{
+    font-size: 42px;
+    font-weight: 500;
+    color: chartreuse;
+    margin-left: 40px;
+}
+.self .img{
+    margin-top: 20px;
+    margin-left: 20px;
+    clip-path: circle(45%);
+}
+.self .content{
+    font-size: 20px;
+    font-weight: 500;
+    color: whitesmoke;
+    margin-left: 30px;
+    justify-content: space-evenly;
+}
+@media screen and (max-width:768px){
+    .self .title{
+        font-size: 37px;
+        font-weight:500;
+    }
+    .self .img{
+        width: 200px;
+        height: 200px;
+    }
+    .self .content{
+        font-size: 20px;
+        font-size: 400;
+    }
+}
+@media screen and (max-width: 640px) {
+    .self .title{
+        font-size: 34px;
+        font-weight: 500;
+    }
+    .self .img{
+        width: 180px;
+        height: 180px;
+    }
+    .self .content{
+        font-size: 20px;
+        font-weight: 420;
+    }
+}
+a{
+    text-decoration:none;
+}
+li{
+    list-style-type: none;
+    border: 1px solid yellow;
+    background-color:yellow;
+    margin:10px;
+    display:inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 30px;
+    float: right;
+
+}
+</style>
+<body>
+    <svg class="illus" viewBox="0 0 439 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="illus">
+            <path id="y-3" d="M323 235C323 221.193 334.193 210 348 210H439V260H348C334.193 260 323 248.807 323 235V235Z"
+                fill="#E6BF07" />
+            <path id="r-1" d="M104 165C104 151.193 115.193 140 129 140H439V190H129C115.193 190 104 178.807 104 165V165Z"
+                fill="#C90F0D" />
+            <path id="y-2" d="M178 95C178 81.1929 189.193 70 203 70H439V120H203C189.193 120 178 108.807 178 95V95Z"
+                fill="#E6BF07" />
+            <path id="y-1" d="M0 25C0 11.1929 11.1929 0 25 0H439V50H25C11.1929 50 0 38.8071 0 25V25Z" fill="#E6BF07" />
+        </g>
+    </svg>
+   <section class="self">
+       <h1 class="title"data-aos="fade-right"
+       data-aos-duration="1300">About Me</h1>
+       <img src="logeshs.jpeg" alt="" class="img" width="350px" height="350px">
+       <p class="content"data-aos="fade-up"
+       data-aos-duration="1400">Hi 👋 this is logesh kumar<br>I'm 18 year old college student from Mayiladuthurai,Tamilnadu.<br>I completed my schooling in silver jublee matriculation higher secondary school<br>Currently pursuing 1st year ECE  in Sri Krishna College of Engineering and Technology,Coimbatore.<br>My aim is  to get placed in a reputed company.<br>My hobbies are cricket,Coding and web devloping. </p>
+   </section>
+   <footer>
+    <a href="index.html"><li><center>Home</center></li></a>
+   </footer>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <script>
+           AOS.init();
+         </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       <script src="about.js"></script>
+</body>
+<script type="text/javascript">
+    const tl = gsap.timeline({ defaults: { ease: 'back' } })
+tl.from('.illus', {
+    opacity: 0,
+    duration: 3,
+    delay: 1
+}).to('#y-1', {
+    x: '200px',
+    repeat: -1,
+    yoyo: true,
+    duration: .8
+}, '-=5').to('#y-2', {
+    x: '150px',
+    repeat: -1,
+    yoyo: true,
+    duration: .5
+}, '-=5').to('#y-3', {
+    x: '50px',
+    repeat: -1,
+    yoyo: true,
+    duration: .6
+}, '-=5').to('#r-1', {
+    x: '100px',
+    repeat: -1,
+    yoyo: true,
+    duration: .6
+}, '-=5')
+const timeline = gsap.timeline({default:{duration:0.5,opacity:0,ease:'Bounce.easeOut'}})
+timeline.from('body',{
+    opacity:0
+ }).from('.self .img',{
+     opacity:0,
+     y:'50px',
+ })
+</script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="project.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+    <title>Project</title>
+
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@300&display=swap');
+/* boiler plate for css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Roboto', sans-serif;
+     background-color: #011627;
+}
+.project{
+    margin-top: 100px;
+    height: 80vh;
+    width: 100%;
+}
+.project .title{
+    font-size: 40px;
+    font-weight: 700;
+    color: yellow;
+    margin-left: 20px;
+}
+.project .content{
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+    margin-left: 20px;
+}
+.project .imgs .Title{
+    margin-top: 80px;
+    margin-bottom: 20px;
+    color: yellowgreen;
+    font-size: 37px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.project .imgs {
+     margin-left: 20px;
+     margin-top: 10px;
+}
+.project .imgs  .ws{
+    margin-left: 20px;
+}
+.project .imgs  .Ws{
+    margin-left: 60px; 
+}
+@media screen and (max-width:768px){
+    .project .title{
+        font-size: 37px;
+        font-weight: 500;
+    }
+    .project .content{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .project .imgs  .Ws{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:640px){
+        .project .title{
+            font-size: 35px;
+            font-weight: 500;
+        }
+        .project .content{
+            font-size: 19px;
+            font-weight: 500;
+        }
+    }
+a{
+    text-decoration:none;
+}
+li{
+    list-style-type: none;
+    border: 1px solid yellow;
+    background-color:yellow;
+    margin:10px;
+    display:inline-block;
+    width: 100px;
+    text-align: center;
+    font-size: 30px;
+    flex-direction: column;
+    float: right;
+
+}
+</style>
+<body>
+    <div class="project">
+    <h1 class="title"data-aos="fade-right"
+    data-aos-duration="1300">Project</h1>
+    <p class="content" data-aos="fade-up"
+    data-aos-duration="1300"><i>I have started learning front end web development during this one month,I have developed one web pages during my course time.These is the websites that  i have developed.<i></p>
+    <div class="imgs">
+      <h2 class="Title">Websites</h2>
+      <a href="bizweb.html"blank target="_blank" class="ws"><img src="https://image.shutterstock.com/image-photo/earth-crystal-glass-globe-ball-260nw-1500154991.jpg" alt="" width="290px" height="290px"></a>
+      <h2 class="Title">certificates</h2>
+       <p class="content" data-aos="fade-up"
+    data-aos-duration="1300"><i>this are some certificates that i got in coding</i></p>
+      <img src="python.jpeg" width="290px" height="290px"><br>
+      <img src="guvi.jpeg" width="290px" height="290px"><br>
+    </div>
+    </div>
+    <footer>
+    <a href="index.html"><li><center>Home</center></li></a>
+   </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+      <script src="project.js"></script>
+</body>
+
+<script>
+const timeline = gsap.timeline({default:{duration:0.5,opacity:0,ease:'Bounce.easeOut'}})
+ timeline.from('body',{
+    opacity:0
+ }).from('.imgs',{
+    opacity:0,
+     y: "50px",
+ }).from('.imgs',{
+    opacity:0,
+    y: "-100%",
+})
+</script>
+</html>

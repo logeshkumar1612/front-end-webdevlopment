@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+     <link rel="stylesheet" href="portifolio.css">
+    <title>LOGESH KUMAR PROFIL</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@300&display=swap');
+/* boiler plate for css*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+  font-family: 'Roboto', sans-serif;
+    background-color: #011627;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+html{
+  scroll-behavior: smooth;
+}
+.navbar{
+    height: 12vh;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    position: fixed;
+    z-index: 1000;
+
+}
+.navbar .logo{
+     font-size: 60px;
+     font-weight: 1000;
+     color: #011627;
+}
+.navbar .navlinks ul{
+    width: 100px;
+    color: blue;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.navbar .navlinks {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.navbar .navlinks .navlink{
+    font-size: 30px;
+    font-weight: 600;
+}
+.navbar .navlinks .navlink.h{
+    margin-right: 20px;
+}
+
+.navbar .navlinks .navlink:hover{
+    color:black;
+}
+.hero{
+    width: 100%;
+    height: 70vh;
+}    
+.hero .mainpage{
+    background-color:#011627;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.illus {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    width: 300px;
+}
+.hero .mainpage .my{
+    clip-path: circle(45%);
+}
+.hero .mainpage .title{
+    color: whitesmoke;
+}
+.hero .mainpage .title:hover{
+    animation: colorchange 2s linear infinite;
+}
+
+@keyframes colorchange{
+    0% {
+        color: blue;
+      }
+      10% {
+        color: #8e44ad;
+      }
+      20% {
+        color: #1abc9c;
+      }
+      30% {
+        color: #d35400;
+      }
+      40% {
+        color: blue;
+      }
+      50% {
+        color: #34495e;
+      }
+      60% {
+        color: blue;
+      }
+      70% {
+        color: #2980b9;
+      }
+      80% {
+        color: #f1c40f;
+      }
+      90% {
+        color: #2980b9;
+      }
+      100% {
+        color: pink;
+      }
+}
+.herobtns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .button{
+        background-color:transparent;
+        display: flex;
+        color: yellow;
+        box-shadow: 0px 0px 3px  2px white;
+        padding: 10px 25px;
+        border-radius: 4px;
+        font-size: 23px;
+        font-weight: 800;
+        margin-top: 10px;
+        margin-right: 10px;
+}
+.button:hover{
+  transform: scaleY(4px);
+}
+.btn{
+  background-color:yellow;
+  display: flex;
+  color:black;
+  box-shadow: 0px 0px 3px  2px white;
+  padding: 10px 25px;
+  border-radius: 4px;
+  font-size: 23px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-left: 20px;
+} 
+.btn:hover{
+  transform: scale(1.02);
+}
+.skills{
+  width: 100%;
+  height: 71vh;
+  margin-top: 300px;
+}
+.skills .title{
+  font-size: 34px;
+  font-weight: 600;
+  color: yellow;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.skills .cardrow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+.skills .card .cardtitle{
+  color: yellowgreen;
+  font-size: 26px;
+  font-weight: 700;
+}
+.skills .card.w{
+  margin-right: 170px;
+}
+.skills .card.p{
+  margin-left: 170px;
+}
+.skills .card.p .title{
+  margin-bottom: 35px;
+}
+.skills .card{
+  width: 300px;
+  height: 300px;
+    box-shadow: 0px 0px 3px  2px whitesmoke;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills .card .cardicons{
+  color: yellowgreen;
+  font-size: 50px;
+}
+.skills .card .cardicons.h{
+  color: rgb(245, 96, 42);
+}
+.skills .card .cardicons.c{
+  color:rgb(93, 248, 248);
+}
+.skills .card .cardicons.p{
+  color: whitesmoke;
+}
+.skills .card .cardcontent{
+  font-size: 20px;
+  font-weight: 600;
+  color: whitesmoke;
+  text-align: center;
+}
+.skills .card:hover{
+  transform: scale(1.04);
+}
+.share{
+  height: 20vh;
+  width: 100%;
+  margin-left: 20px;
+}
+}.share .title{
+  font-size: 28px;
+  font-weight: 600;
+  color: aquamarine;
+  margin-left: 650px;
+}
+.share .icons{
+  margin-left: 30px;
+  font-size: 40px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 130px;
+}
+.share .icons .insta{
+  color:  #833AB4;
+}
+.share .icons .insta:hover{
+ transform: scale(1.2);
+}
+.share .icons .whatsapp{
+  color: greenyellow;
+}
+.share .icons .whatsapp:hover{
+  transform: scale(1.2);
+}
+.share .icons .fb{
+  color:  #4267B2;
+}
+.share .icons .fb:hover{
+  transform: scale(1.2);
+}
+.scrollbutton{
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(50%);
+  cursor: pointer;
+
+}
+
+@media screen and (max-width:768px){
+  .skills .cardRow{
+      flex-direction: column;
+  }
+  .navbar .navlinks ul{
+      display:block;
+  }
+  .skills .cardrow{
+    display: flex;
+    flex-direction: column;
+  }
+  .skills .cardrow .card.w{
+    margin-left: 160px;
+  }
+  .skills .cardrow .card.p{
+    margin-right: 170px;
+  }
+  .share{
+    margin-top: 700px;
+  }
+  .share .title{
+    margin-right: 10px;
+  }
+  .share .icons{
+    margin-left: 90px;
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  .share .icons .fb{
+    margin-right: 20px;
+  }
+  .share .icons .whatsapp{
+    margin-left: 20px;
+  }
+ 
+  @media screen and (max-width: 640px) {
+      .navbar {
+        padding: 0px 30px;
+      }
+      .navbar .navlinks ul{
+        display:block;
+    }
+      .navbar .navlink ul{
+        margin-left: 20px;
+      }
+      .mainpage .title {
+        font-size: 25px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+      .hero .mainpage .img{
+         margin-bottom: 60px;
+         width: 80px;
+         height: 80px;
+      }
+      .skills .cardrow{
+        display: flex;
+        flex-direction: column;
+      }
+      .skills .cardrow .card.w{
+        margin-left: 160px;
+      }
+      .skills .cardrow .card.p{
+        margin-right: 170px;
+      }
+
+      .share{
+        margin-top: 700px;
+      }
+      .share .title{
+        margin-right: 10px;
+      }
+      .share .icons{
+        margin-left: 90px;
+        display: flex;
+        justify-content: space-evenly;
+
+      }
+      .share .icons .fb{
+        margin-right: 20px;
+      }
+      .share .icons .whatsapp{
+        margin-left: 20px;
+      }
+    }
+}
+</style>
+
+<body>
+    <nav class="navbar" style="background-color: yellow">
+        <div class="logo">
+            <a href="#" class="logo a">
+                <i class="fas fa-user-circle"></i>
+            </a>    
+        </div>
+        <nav class="navlinks">
+            <ul>
+                <li>
+                <a href="#" class="navlink h">
+                    <i class="fas fa-home"></i>
+                </a>
+                <p>Home</p>
+            </li>   
+            </ul>
+            <ul>
+                <li>
+                <a href="project.html" class="navlink p" target="_blank">
+                    <i class="fab fa-product-hunt"></i> 
+                </a>
+              <p>project</p>
+            </li>
+           </ul>
+           <ul>
+               <li>
+               <a href="about.html" class="navlink a" target="_blank">
+                <i class="fab fa-adn"></i>
+               </a>
+               <p>About</p>
+            </li>
+           </ul>
+        </nav>
+       </nav>  
+       <svg class="illus" viewBox="0 0 439 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="illus">
+            <path id="y-3" d="M323 235C323 221.193 334.193 210 348 210H439V260H348C334.193 260 323 248.807 323 235V235Z"
+                fill="#E6BF07" />
+            <path id="r-1" d="M104 165C104 151.193 115.193 140 129 140H439V190H129C115.193 190 104 178.807 104 165V165Z"
+                fill="#C90F0D" />
+            <path id="y-2" d="M178 95C178 81.1929 189.193 70 203 70H439V120H203C189.193 120 178 108.807 178 95V95Z"
+                fill="#E6BF07" />
+            <path id="y-1" d="M0 25C0 11.1929 11.1929 0 25 0H439V50H25C11.1929 50 0 38.8071 0 25V25Z" fill="#E6BF07" />
+        </g>
+    </svg>
+       <section class="hero">
+           <div class="mainpage">
+                <img src="logeshs.jpeg" width="300px" height="350px" class="my">
+                <h1 class="title">LOGESH KUMAR S</h1>
+                <div class="herobtns">
+                <a href="about.html" class="button" target="_blank">About me</a>
+                <a href="#" class="btn">Get in touch</a>
+            </div>
+           </div>
+       </section> 
+</body>
+</html>
+       </section>
+       <section class="skills">
+        <h2 class="title">Skills</h2>
+        <div class="cardrow">
+            <div class="card w"class="card"  data-aos="fade-right"
+            data-aos-duration="1300">
+                <div class="cardtitle">Web Dev</div>
+                <div class="cardicons h">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="cardcontent">
+                    I AM FRONT END WEBDEVLOPER <br>
+                </div>
+            </div>
+             <div class="card c"data-aos="fade-up"
+             data-aos-duration="1300">
+                <div class="cardtitle">C-Programming</div>
+                <div class="cardicons c">
+                    <i class="fab fa-cuttlefish"></i>
+                </div>
+                <div class="cardcontent">
+                  I LEARNED C  PROGRAMMING<br> 
+                </div>
+            </div>
+             <div class="card p"data-aos="fade-left"
+             data-aos-duration="1300">
+                <div class="cardtitle">Python</div>
+                <div class="cardicons p">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="cardcontent">
+                    I AM PYTHON PROGRAMMER<br>
+                </div>
+            </div>
+        </div>
+       </section>
+       <section class="share">
+           <div class="social">
+               <h2 class="title"><center><i>Let us talk</i></center></h2>
+               <div class="icons">
+                <div class="fb">  
+                 <a href="#">  
+                <i class="fab fa-facebook"></i>
+                 </a> 
+                </div>
+                <div class="insta">
+                <a href="#">
+                <i class="fab fa-instagram"></i>
+               </a>
+                </div>
+                <div class="whatsapp">
+                <a href="#">
+                <i class="fab fa-whatsapp"></i>
+                </a>
+                </div>
+               </div>
+           </div>
+       </section>
+       <div class="scrollbutton">
+        <span class="material-icons">
+            expand_less
+        </span>
+    </div>
+       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+       <script>
+           AOS.init();
+         </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+       <script src="portifolio.js"></script>
+       <script type="text/javascript">
+    const scrollbutton = document.querySelector('.scrollbutton')
+scrollbutton.addEventListener('click',()=> {
+    document.body.scrollTop=0
+    document.documentElement.scrollTop=0
+})
+const timeline = gsap.timeline({default:{duration:0.5,opacity:0,ease:'Bounce.easeOut'}})
+ timeline.from('body',{
+    opacity:0
+ }).from('.navbar',{
+     y: "-100%",
+ }).from('.logo', {
+    opacity: 0
+}).from('.navbar .navLinks', {
+        opacity: 0,
+        stagger: 0.3
+ })
+   .from('.hero .title', {
+        y: '50px',
+        opacity: 0
+}).from('.hero .text', {
+        y: '50px',
+        opacity: 0
+ }).from('.hero .button', {
+        y: '50px',
+        opacity: 0
+ }).from('.hero .btn', {
+    y: '50px',
+    opacity: 0
+ }).from('.share .title',{
+     y:'50px',
+     opacity:0
+ }).from('.share .icons',{
+    y:'50px',
+    opacity:0
+})
+
+ const tl = gsap.timeline({ defaults: { ease: 'back' } })
+tl.from('.illus', {
+    opacity: 0,
+    duration: 3,
+    delay: 1
+}).to('#y-1', {
+    x: '200px',
+    repeat: -1,
+    yoyo: true,
+    duration: .8
+}, '-=5').to('#y-2', {
+    x: '150px',
+    repeat: -1,
+    yoyo: true,
+    duration: .5
+}, '-=5').to('#y-3', {
+    x: '50px',
+    repeat: -1,
+    yoyo: true,
+    duration: .6
+}, '-=5').to('#r-1', {
+    x: '100px',
+    repeat: -1,
+    yoyo: true,
+    duration: .6
+}, '-=5')
+</script>
+</body>
+</html>
